@@ -109,7 +109,15 @@ export default function FeedbackBubbles({ feedbackItems }: FeedbackBubblesProps)
                     "{selectedFeedback.message}"
                   </p>
                   <div className="text-sm text-gray-500 dark:text-gray-400">
-                    Submitted on {new Date(selectedFeedback.createdAt).toLocaleDateString()}
+                    Submitted on {new Date(selectedFeedback.createdAt).toLocaleString("en-IN", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "numeric",
+                      hour: "2-digit",
+                      minute: "2-digit",
+                      hour12: true,
+                    })}
+
                   </div>
                 </motion.div>
               </div>
