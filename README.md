@@ -54,7 +54,7 @@ const newFeedback = {
 const event = new CustomEvent("newFeedback", {
     detail: {
         feedback: newFeedback,
-        position, // button click position
+        position,
   },
 })
 window.dispatchEvent(event)
